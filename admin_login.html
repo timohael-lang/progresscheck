@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEVTEAM — Admin Login</title>
+<link rel="stylesheet" href="/static/admin.css">
+</head>
+<body class="login-body">
+
+<div class="login-box">
+    <div class="brand">✦ DEVTEAM</div>
+    <h1>Панель управления</h1>
+    <p>Авторизация администратора</p>
+
+    {% if error %}
+    <div class="error">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST" action="/admin/login">
+        <input type="hidden" name="csrf" value="{{ csrf }}">
+
+        <label>Логин</label>
+        <input name="username" autocomplete="username" required>
+
+        <label>Пароль</label>
+        <input name="password" type="password"
+               autocomplete="current-password" required>
+
+        <button type="submit">Войти →</button>
+    </form>
+
+    <a href="/">← Вернуться на сайт</a>
+</div>
+
+</body>
+</html>

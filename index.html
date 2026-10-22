@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVTEAM — Вместе с нами ты силен</title>
+    <meta name="description" content="Присоединяйся к DEVTEAM. Развивай навыки и создавай проекты вместе с нами.">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="background-glow"></div>
+
+<header class="navbar">
+    <a href="/" class="logo">
+        <span class="logo-icon">✦</span>
+        DEVTEAM
+    </a>
+
+    <nav>
+        <a href="#about">О нас</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="/admin">Админ</a>
+    </nav>
+
+    <button class="nav-button" onclick="openModal()">
+        Подать заявку ↗
+    </button>
+</header>
+
+<main>
+
+<section class="hero">
+
+    <div class="announcement">
+        <span class="green-dot"></span>
+        Набор разработчиков открыт
+        <span>↗</span>
+    </div>
+
+    <h1>
+        Вместе с нами —<br>
+        <em>ты силен.</em>
+    </h1>
+
+    <p class="hero-description">
+        Твой талант заслуживает большего.
+        Присоединяйся к DEVTEAM, создавай проекты,
+        развивай навыки и стань частью нашей команды.
+    </p>
+
+    <button class="primary-button" onclick="openModal()">
+        Подать заявку
+        <span>↗</span>
+    </button>
+
+    <div class="hero-benefits">
+        <span>✧ Новые возможности</span>
+        <span>✧ Развитие навыков</span>
+        <span>✧ Сильная команда</span>
+    </div>
+
+</section>
+
+<section class="advantages" id="advantages">
+
+    <div class="section-heading">
+        <span class="section-label">ВОЗМОЖНОСТИ</span>
+        <h2>Создавай. Развивайся. <em>Побеждай.</em></h2>
+        <p>
+            Мы объединяем людей, которые хотят
+            создавать нечто большее.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <article class="feature-card">
+            <div class="feature-icon">⌘</div>
+            <h3>Сильная команда</h3>
+            <p>
+                Работай с единомышленниками,
+                делись знаниями и развивайся
+                вместе с другими разработчиками.
+            </p>
+
+            <div class="visual visual-network">
+                <div class="network-center">✦</div>
+                <span class="node n1"></span>
+                <span class="node n2"></span>
+                <span class="node n3"></span>
+                <span class="node n4"></span>
+            </div>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">⌁</div>
+            <h3>Постоянный рост</h3>
+            <p>
+                Совершенствуй навыки,
+                изучай новые технологии
+                и достигай новых высот.
+            </p>
+
+            <div class="visual visual-chart">
+                <svg viewBox="0 0 300 160" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#d7ff70" stop-opacity=".65"/>
+                            <stop offset="100%" stop-color="#d7ff70" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M0 140 Q25 110 45 125 T90 85 T140 105 T185 52 T230 70 T300 10 L300 160 L0 160 Z"
+                          fill="url(#chartFill)"/>
+                    <path d="M0 140 Q25 110 45 125 T90 85 T140 105 T185 52 T230 70 T300 10"
+                          fill="none" stroke="#ddff92" stroke-width="2"/>
+                </svg>
+            </div>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">◇</div>
+            <h3>Новые проекты</h3>
+            <p>
+                Участвуй в разработке интересных
+                проектов и получай практический
+                опыт работы.
+            </p>
+
+            <div class="visual visual-orbit">
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <div class="orbit orbit-3"></div>
+                <div class="orbit-core">✦</div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="about-section" id="about">
+    <span class="section-label">DEVTEAM COMMUNITY</span>
+    <h2>Твоё будущее <em>начинается здесь.</em></h2>
+    <p>
+        Неважно, начинаешь ли ты свой путь
+        или уже имеешь опыт. Если ты готов
+        развиваться — мы ждём твою заявку.
+    </p>
+
+    <button class="primary-button" onclick="openModal()">
+        Присоединиться к команде ↗
+    </button>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-logo">✦ DEVTEAM</div>
+    <p>© 2026 DEVTEAM. Создаём будущее вместе.</p>
+</footer>
+
+<!-- АНКЕТА -->
+
+<div class="modal-overlay" id="modal">
+
+    <div class="modal">
+
+        <button class="close-modal" onclick="closeModal()">✕</button>
+
+        <div class="modal-badge">✦ JOIN DEVTEAM</div>
+
+        <h2>Стань частью <em>команды.</em></h2>
+
+        <p class="modal-description">
+            Расскажи немного о себе.
+            Мы рассмотрим твою кандидатуру.
+        </p>
+
+        <form id="applicationForm">
+
+            <label>Имя и фамилия</label>
+            <input
+                name="fullname"
+                placeholder="Иван Иванов"
+                maxlength="100"
+                required
+            >
+
+            <label>Возраст</label>
+            <input
+                name="age"
+                type="number"
+                placeholder="18"
+                min="1"
+                max="120"
+                required
+            >
+
+            <label>Опыт работы</label>
+            <textarea
+                name="experience"
+                placeholder="Расскажи о своём опыте..."
+                maxlength="2000"
+                required
+            ></textarea>
+
+            <label>Портфолио</label>
+            <input
+                name="portfolio"
+                type="url"
+                placeholder="https://github.com/username"
+                maxlength="500"
+                required
+            >
+
+            <label>Языки программирования</label>
+            <input
+                name="languages"
+                placeholder="Python, JavaScript, C++..."
+                maxlength="500"
+                required
+            >
+
+            <label>Контакты (Discord / Telegram)</label>
+            <input
+                name="contacts"
+                placeholder="@username или discord_username"
+                maxlength="200"
+                required
+            >
+
+            <label class="consent">
+                <input type="checkbox" name="consent" required>
+                <span>
+                    Согласен на обработку указанных данных
+                    для рассмотрения моей заявки.
+                </span>
+            </label>
+
+            <button class="primary-button form-submit" type="submit">
+                Отправить заявку ↗
+            </button>
+
+            <p id="formStatus" role="status"></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
